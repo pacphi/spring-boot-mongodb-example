@@ -146,6 +146,23 @@ Customer[id=51df1b0a3004cb49c50210f8, firstName='Alice', lastName='Smith']
 Customer[id=51df1b0a3004cb49c50210f9, firstName='Bob', lastName='Smith']
 ....
 
+
+== Connecting to an external Mongo instance
+
+If you wanted to connect to a Cosmos instance on Azure, you could add (though not recommended) an `application-cloud.yml` file to `src/main/resources` containing, e.g.,
+
+```
+spring:
+  data:
+    mongodb:
+      database: {database-name}
+      uri: mongodb://cozmo-mongo:{token}@{server-name}.documents.azure.com:10255/?ssl=true&replicaSet=globaldb
+
+management:
+  cloudfoundry:
+    enabled: true
+    skip-ssl-validation: true
+```
 == Summary
 Congratulations! You set up a MongoDB server and wrote a simple application that uses Spring Data MongoDB to save objects to and fetch them from a database -- all without writing a concrete repository implementation.
 

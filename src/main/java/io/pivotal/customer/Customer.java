@@ -1,14 +1,18 @@
 package io.pivotal.customer;
 
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.data.mongodb.core.index.Indexed;
 
-
+@Document(collection="customers")
 public class Customer {
 
     @Id
     public String id;
 
     public String firstName;
+
+    @Indexed
     public String lastName;
 
     public Customer() {}
