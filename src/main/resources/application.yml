@@ -4,3 +4,8 @@ management:
   info:
     git:
       mode: full
+
+      
+logging: 
+  level:
+    org.springframework.data.mongodb.core.MongoTemplate: DEBUG
