@@ -1,0 +1,16 @@
+spring:
+  data:
+    mongodb:
+      uri: mongodb://104.199.119.20/customers
+      database: customers
+      host: 104.199.119.20
+      port: 27017
+      username: root
+      password: WyDSPiF1DMp5
+  datasource:
+    driverClassName: net.sf.mongodb_jdbc_driver.MongoDbDriver
+
+management:
+  cloudfoundry:
+    enabled: true
+    skip-ssl-validation: true

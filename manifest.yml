@@ -1,0 +1,10 @@
+---
+applications:
+- name: spring-boot-mongodb-example
+  memory: 1024M
+  random-route: true
+  instances: 1
+  path: build/libs/gs-accessing-data-mongodb-0.1.0.jar
+  buildpack: java_buildpack_offline
+  env:
+    JAVA_OPTS: -Djava.security.egd=file:///dev/urandom
