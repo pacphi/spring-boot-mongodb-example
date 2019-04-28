@@ -44,6 +44,6 @@ dependencies {
     compile('org.springframework.boot:spring-boot-starter-hateoas')
     compile('org.springframework.data:spring-data-rest-hal-browser')
     testCompile('org.springframework.boot:spring-boot-starter-test')
-    testCompile('de.flapdoodle.embed:de.flapdoodle.embed.mongo:1.50.5')
+    testCompile('de.flapdoodle.embed:de.flapdoodle.embed.mongo:2.2.0')
 }
 
